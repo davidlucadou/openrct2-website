@@ -54,8 +54,9 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
         </div>
       </li>
       <li>
-        <a href="my-server-address-with.portnumber:123456" onclick="if(this.textContent == 'Server Address (Click Here)'){this.textContent = 'my-server-address-with.portnumber:123456'} else {this.textContent = 'Server Address (Click Here)'}">Server Address (Click Here)</a>
-        <!-- You could do 'a href="javascript:void(0)"', but by putting the actual address into the href and the onclick, people who have disabled JavaScript or are using text-only browsers (i.e. Links, Elinks, Emacs/W3) can still view the link when their cursor moves over the text. -->
+        <a href="https://my-server-address-with.portnumber:123456" onclick="if(this.textContent == 'Server Address (Click Here)'){this.textContent = 'my-server-address-with.portnumber:123456'} else {this.textContent = 'Server Address (Click Here)'}">Server Address (Click Here)</a>
+        <!-- You could do 'a href="javascript:void(0)"', but by putting the actual address into the href and the onclick, people who have disabled JavaScript or are using text-only browsers (i.e. Links, Elinks, Emacs/W3) can still view the link when their cursor moves over the text.
+        Make sure to include an http:// or https:// in the href. Even though OpenRCT2 cannot resolve that in a server address, if you do not include it, the link displayed when hovered over will be "https://my.address.here/my.server.address.here:123456" in some browsers.-->
         <div class="information">Password: [my password goes here, or No Password]</div>
       </li>
 	    <li>
