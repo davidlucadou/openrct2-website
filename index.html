@@ -55,7 +55,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
       </li>
       <li>
         <a class="ignore-click" href="https://my-server-address-with.portnumber:123456" onclick="if(this.textContent == 'Server Address (Click Here)'){this.textContent = 'my-server-address-with.portnumber:123456'} else {this.textContent = 'Server Address (Click Here)'}">Server Address (Click Here)</a>
-        <script> // For server address href
+        <script>
             $(".ignore-click").click(function(){
                 return false;
             }) // Source https://stackoverflow.com/a/34386502
