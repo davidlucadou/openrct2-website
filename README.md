@@ -26,28 +26,45 @@ To use this, you will need:
 10. Enjoy your OpenRCT2 webserver!
 
 ## FAQ
-* Why does this require Linux?
-	* The Windows version of OpenRCT2 does not support command line flags; that is, "openrct2.exe --version" just launches the game, it does not give any version information.
-	* I do not own a Mac or have easy access to one to test this out on. If anyone would like to put in a pull request after verifying OS X builds have the --version parameter, I'll add OS X compatibility.
-	* If future Windows builds have the --version parameter, please put in a pull request and I'll add that to the list.
-* Why does this have to run on the same box as my server?
-	* To run commands on another Linux system to poll the server version would require working with SSH, which introduces its own can of worms. At least in the initial release, I am not supporting this.
-	* Alternatively, the servers could be polled locally and have an FTP/webserver for copying the servers.json file over, but again, I'm not supporting this in the initial release.
-* Is there a status indicator for if the server is online/offline?
-  * Not at this time, but it is one of my higher priorities for this project.
-* Are there any command line parameters for the Python script?
-	* Not at this time. However, I do plan on supporting this in the future.
-* Does this support multiple servers?
-	* Not at this time. I might support this eventually, but I think I should wait until the project is more mature and has a proper API for polling multiple instances.
-* Why did you include the server version on the webpage?
-	* So you don't have to launch the client find out a server is running an older version and then have to download the older version. It serves a purpose.
-* Why doesn't py/run-update-server-info have a .sh extension?
-  * I removed it because Cron jobs (at least on Debian-based distros) cannot have any special characters except for "-" and "_", meaning you cannot have any file extensions. If I did put in an extension, it would be skipped.
-* How well does this work with text-only browsers?
-  * Amazingly well, actually.
-  * ![Demonstration of website in Links, a text-only browser](img/text-only-demo.png)
-* Where can I see an example of a server running this?
-	* https://rct.lunamoona.tv/
+> Why does this require Linux?
+
+The Windows version of OpenRCT2 does not support command line flags; that is, "openrct2.exe --version" just launches the game, it does not give any version information.
+I do not own a Mac or have easy access to one to test this out on. If anyone would like to put in a pull request after verifying OS X builds have the --version parameter, I'll add OS X compatibility.
+If future Windows builds have the --version parameter, please put in a pull request and I'll add that to the list.
+
+>Why does this have to run on the same box as my server?
+
+To run commands on another Linux system to poll the server version would require working with SSH, which introduces its own can of worms. At least in the initial release, I am not supporting this.
+Alternatively, the servers could be polled locally and have an FTP/webserver for copying the servers.json file over, but again, I'm not supporting this in the initial release.
+
+> Is there a status indicator for if the server is online/offline?
+
+Not at this time, but it is one of my higher priorities for this project.
+
+> Are there any command line parameters for the Python script?
+
+Not at this time. However, I do plan on supporting this in the future.
+
+> Does this support multiple servers?
+
+Not at this time. I might support this eventually, but I think I should wait until the project is more mature and has a proper API for polling multiple instances.
+
+> Why did you include the server version on the webpage?
+
+So you don't have to launch the client find out a server is running an older version and then have to download the older version. It serves a purpose.
+
+> Why doesn't py/run-update-server-info have a .sh extension?
+
+I removed it because Cron jobs (at least on Debian-based distros) cannot have any special characters except for "-" and "_", meaning you cannot have any file extensions. If I did put in an extension, it would be skipped.
+
+>How well does this work with text-only browsers?
+
+Amazingly well, actually.
+![Demonstration of website in Links, a text-only browser](img/text-only-demo.png)
+
+> Where can I see an example of a server running this?
+
+https://rct.lunamoona.tv/
   
 ## License
 
