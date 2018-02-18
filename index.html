@@ -1,0 +1,74 @@
+<!--
+OpenRCT2 Server Website Template
+Copyright (C) 2018 David Lucadou
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My OpenRCT2 Server</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My OpenRCT2 Server Website!">
+  <meta name="keywords" content="OpenRCT2 server, multiplayer, RollerCoaster Tycoon 2, Roller Coaster Tycoon, game">
+  <meta name="author" content="David Lucadou">
+  <link rel="stylesheet" href="css/openrct2.css">
+  <link rel="icon" href="/img/favicon.png" type="image/png"><!-- Major Browsers -->
+  <!--[if IE]><link rel="SHORTCUT ICON" href="/img/favicon.ico" type="image/x-icon"><![endif]--><!-- Internet Explorer-->
+  <script src="js/server-info.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $("#footer").load("/res/footer.html");
+    });
+  </script>
+</head>
+<body>
+  <div id="gradient"></div>
+  <div id="content">
+    <div id="logo">OpenRCT2</div>
+    <h1>My OpenRCT2 Server</h1>
+    <h2>This is my OpenRCT2 server webpage</h2>
+    <ul id="buttons">
+      <li>
+        <a class="link" href="https://github.com/OpenRCT2/OpenRCT2/releases/">Download OpenRCT2</a>
+        <!-- Running development builds? Use this link instead:
+          https://openrct2.org/downloads/latest/develop
+          (And you might want to make a note that this is a development build in the link text.)
+          Alternatively, if you switch between stable and development often, you could just link the build site, which has development builds and links to the stable builds on GitHub: https://openrct2.org/downloads
+        -->
+          <div class="information">
+          Server Version — <span class="server-version">[Unknown version, try refreshing]</span>
+        </div>
+      </li>
+      <li>
+        <a href="my-server-address-with.portnumber:123456" onclick="if(this.textContent == 'Server Address (Click Here)'){this.textContent = 'my-server-address-with.portnumber:123456'} else {this.textContent = 'Server Address (Click Here)'}">Server Address (Click Here)</a>
+        <!-- You could do 'a href="javascript:void(0)"', but by putting the actual address into the href and the onclick, people who have disabled JavaScript or are using text-only browsers (i.e. Links, Elinks, Emacs/W3) can still view the link when their cursor moves over the text. -->
+        <div class="information">Password: [my password goes here, or No Password]</div>
+      </li>
+	    <li>
+        <a href="maybe-put-a-link-to-a-password-here-or-just-remove-the.href">Server Password</a>
+        <div class="information">Put the password here, or a link to it</div>
+      </li>
+      <li>
+        <a href="email-address-or-email-hider@domain.asdf">Contact Me</a>
+        <div class="information">Put your contact information here</div>
+      </li>
+    </ul>
+  </div>
+  <div id="text-mode-footer-link">I see you're using a text-mode browser (or have disabled JavaScript)! Normally there would be a footer with more links, but since that's loaded in via JavaScript, click <a href="/res/footer.html">here</a> to see what would normally be inserted at the bottom.<br>And to see the server version, click <a href="/res/server.json">here</a>.</div>
+  <div id="footer"></div>
+</body>
+</html>
