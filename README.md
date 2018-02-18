@@ -60,6 +60,7 @@ I removed it because Cron jobs (at least on Debian-based distros) cannot have an
 >How well does this work with text-only browsers?
 
 Amazingly well, actually.
+
 ![Demonstration of website in Links, a text-only browser](img/text-only-demo.png)
 
 > Where can I see an example of a server running this?
