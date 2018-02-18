@@ -43,6 +43,9 @@ To use this, you will need:
 	* So you don't have to launch the client find out a server is running an older version and then have to download the older version. It serves a purpose.
 * Why doesn't py/run-update-server-info have a .sh extension?
   * I removed it because Cron jobs (at least on Debian-based distros) cannot have any special characters except for "-" and "_", meaning you cannot have any file extensions. If I did put in an extension, it would be skipped.
+* How well does this work with text-only browsers?
+  * Amazingly well, actually.
+  * ![Demonstration of website in Links, a text-only browser](img/text-only-demo.png)
 * Where can I see an example of a server running this?
 	* https://rct.lunamoona.tv/
   
