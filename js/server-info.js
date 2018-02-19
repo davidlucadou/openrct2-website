@@ -21,7 +21,7 @@ window.onload = function() {
   removeTextModeFooter();
   // Get server info JSON
   var request = new XMLHttpRequest();
-  request.open("GET", "res/server.json", true);
+  request.open("GET", "/res/server.json", true);
   request.send();
 
 
