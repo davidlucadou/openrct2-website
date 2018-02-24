@@ -13,14 +13,21 @@ def main(rct_path, info_path):
 	# Get the version of OpenRCT2
 	cmd = openrct2_path + ' --version' # Note: 'openrct2.exe --version' doesn't work, hence the Linux requirement (not sure if this works on Mac or not, but you shouldn't run a dedicated server on OS X anyway...)
 	cmd = shlex.split(cmd)
-	p = subprocess.Popen(cmd, stdout=subprocess.PIPE).communicate()
-	version_output = p[0].decode()
+	p = subprocess.run(cmd, stdout=subprocess.PIPE)#.communicate()
+	version_output = p.stdout.decode().replace('\n', '|')
+  # Sample output:
+  #   $ openrct2 --version
+  #   OpenRCT2, v0.1.2-HEAD build aba97e4
+  #   Linux (x86-64)
 	regex = re.search(r'[v]([0-9\.]+)', version_output)
 	version = regex.group(1) #group(0) returns "vX.X.X", group(1) returns "X.X.X"
+  regex = re.search(r'.+(build )(\w+)(.+)', version_output)
+  build = regex.group(2) # I would prefer to get the actual version, i.e. 0.1.2-34, but sadly that's not provided, even with "--version --verbose", so the build hash will have to do
 
 	# Put information into json format
 	server_data = {}
-	server_data['version'] = version_output
+	server_data['version'] = version
+  server_data['build'] = build
 	server_data['lastUpdated'] = datetime.datetime.now()
 	
 	# Set JSONEncoder to be able to parse datetime objects properly
